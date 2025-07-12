@@ -1,0 +1,93 @@
+.partners {
+    .partners-introduction {
+        margin-block: var(--title-spacing, --spacing);
+        text-align: center;
+        p {
+            margin-block: clamp(0.625rem, 1.592vw + 0.277rem, 2.188rem)
+                clamp(1.563rem, 2.548vw + 1.005rem, 4.063rem);
+            max-width: 705px;
+            color: var(--txt-color);
+        }
+        .swiper {
+            max-width: 950px;
+            width: 90%;
+            height: auto;
+            padding-block: 40px;
+            background: #dedede;
+            border-radius: 25px;
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+
+                img {
+                    max-width: 250px;
+                    height: 150px;
+                    object-fit: cover;
+                }
+            }
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: var(--default-red);
+            }
+        }
+    }
+
+    .partners-info {
+        .partner-card,
+        .partner-card-flipped {
+            margin-bottom: clamp(2.188rem, 4.586vw + 1.184rem, 6.688rem);
+            .img-col {
+                justify-content: center;
+                img {
+                    @media (max-width: 578px) {
+                        width: 80%;
+                    }
+                }
+            }
+            .text-col {
+                @include flex($direction: column, $align: center);
+                border-left: 1px solid var(--default-red);
+                @media (max-width: 992px) {
+                    border-left: none;
+                }
+                .wrapper {
+                    h3 {
+                        justify-content: center;
+                    }
+                    ul {
+                        padding-left: 0;
+                        list-style: none;
+                        max-width: 636px;
+                        li {
+                            margin-top: 8px;
+                            @include fonts(18px, 300, 28px);
+                            color: var(--txt-color);
+                            @media (max-width: 992px) {
+                                @include fonts(15px, 300, 18px);
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+                .main-btn {
+                    margin-top: clamp(1.375rem, 1.465vw + 1.055rem, 2.813rem);
+                    width: 228px;
+                }
+            }
+        }
+        .partner-card-flipped {
+            .img-col {
+                border-left: 1px solid var(--default-red);
+                @media (max-width: 992px) {
+                    border-left: none;
+                }
+            }
+            .text-col {
+                border-left: none;
+            }
+        }
+    }
+}

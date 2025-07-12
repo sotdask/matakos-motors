@@ -1,0 +1,30 @@
+.news-card {
+    .card-img {
+        overflow: hidden;
+        img {
+            height: 250px;
+            transition: transform 0.4s ease;
+            @media (hover: hover) {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .card-body {
+        max-width: 363px;
+        margin-top: 10px;
+        a {
+            text-decoration: none;
+            color: var(--default-red);
+        }
+        p {
+            @include fonts(14px, 300, 20px);
+            color: var(--txt-color);
+        }
+        span {
+            @include fonts(12px, 300, 20px);
+            color: #736a51;
+        }
+    }
+}

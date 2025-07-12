@@ -1,0 +1,127 @@
+header {
+    transition: 0.3s ease-in-out;
+    .top-side {
+        height: 34px;
+        background-color: var(--default-dark);
+        @include flex($justify: flex-end, $align: center);
+        ul {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            @include flex($justify: flex-end, $align: center);
+            gap: 0 30px;
+            @media (max-width: 992px) {
+                justify-content: space-between;
+            }
+            li {
+                a {
+                    @include fonts(14px, 400, 20px);
+                    text-decoration: none;
+                    color: var(--txt-color);
+                    transition: 0.3s ease;
+                    @media (hover: hover) {
+                        &:hover {
+                            color: var(--default-red);
+                        }
+                    }
+                    img {
+                        margin-bottom: 3px;
+                        margin-right: 5px;
+                    }
+                    span {
+                        @media (max-width: 576px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nav-bar {
+        background-color: transparent;
+        height: 78px;
+        @include flex($align: center);
+        .container {
+            .row {
+                .leftSide {
+                    @include flex($align: center);
+                    img {
+                        max-width: 150px;
+                    }
+                    .phoneImg {
+                        width: 35px;
+                        z-index: 100001;
+                    }
+                }
+                .centerSide {
+                    @include flex($align: center);
+                    @media (max-width: 992px) {
+                        justify-content: center;
+                    }
+                    ul {
+                        width: 100%;
+                        padding-left: 0;
+                        margin-bottom: 0;
+                        list-style: none;
+                        @include flex($justify: space-between);
+                        li {
+                            a {
+                                text-decoration: none;
+                                @include fonts(18px, 400, 18px);
+                                color: var(--txt-color);
+                                transition: 0.3s ease;
+                                @media (hover: hover) {
+                                    &:hover {
+                                        color: var(--default-red);
+                                    }
+                                }
+                            }
+                        }
+                        .dropdown {
+                            position: relative;
+                            .dropdown-title {
+                                cursor: pointer;
+                            }
+                            .dropdown-menu {
+                                display: none;
+                                position: absolute;
+                                padding: 15px;
+                                list-style: none;
+                                border: none;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                                z-index: 1000;
+                                gap: 10px 0;
+                                background-color: var(--default-red);
+                                border-radius: 25px;
+                                color: var(--txt-color);
+                                li {
+                                    a {
+                                        @media (hover: hover) {
+                                            &:hover {
+                                                color: black;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .dropdown:hover .dropdown-menu {
+                            display: block;
+                        }
+                    }
+                    img {
+                        max-width: 150px;
+                        z-index: 100001;
+                    }
+                }
+                .rightSide {
+                    @include flex($align: center, $justify: flex-end);
+                }
+            }
+        }
+    }
+    &.scrolled {
+        box-shadow: -1px -1px 9px 0px var(--default-red);
+        background-color: rgb(3, 3, 3);
+    }
+}

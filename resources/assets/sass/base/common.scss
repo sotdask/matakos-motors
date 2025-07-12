@@ -1,0 +1,18 @@
+:root {
+    --default-dark: #2B2930;
+    --txt-color: #D6D2D2;
+    --default-red: #B30000;
+    --default-grey: #DEDEDE;
+    --spacing: clamp(2.188rem, 4.586vw + 1.184rem, 6.688rem);
+    --title-spacing: clamp(2.188rem, 6.051vw + 0.864rem, 8.125rem);
+}
+
+header {
+    position: sticky;
+    z-index: 100000;
+    top: 0;
+}
+
+.container {
+    max-width: 1500px;
+}

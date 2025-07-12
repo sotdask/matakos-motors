@@ -1,0 +1,16 @@
+.news {
+    .article-menu {
+        margin-block: var(--title-spacing) var(--spacing);
+        @include flex($direction: column, $align: center);
+        .intro-wrapper {
+            text-align: center;
+            p {
+                margin-block: 20px var(--spacing);
+                max-width: 400px;
+            }
+        }
+        .row {
+            gap: 50px 45px;
+        }
+    }
+}

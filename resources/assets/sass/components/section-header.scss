@@ -1,0 +1,14 @@
+.title-wrapper {
+    @include flex($align: center, $justify: center);
+    gap: 0 10px;
+    margin-bottom: clamp(1.125rem, 4.268vw + 0.191rem, 5.313rem);
+    .line {
+        flex: 1;
+        height: 2px;
+        background-color: var(--default-red);
+    }
+    .font-heading2 {
+        margin: 0;
+        white-space: nowrap;
+    }
+}

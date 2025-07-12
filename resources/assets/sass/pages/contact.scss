@@ -1,0 +1,108 @@
+.contact {
+    .form-container {
+        margin-block: var(--title-spacing) var(--spacing);
+        @include flex($direction: column, $align: center);
+        .row {
+            margin-top: clamp(1.563rem, 3.057vw + 0.894rem, 4.563rem);
+            .wrapper {
+                text-align: center;
+                h5 {
+                    color: var(--default-red);
+                    @include fonts(21px, 400, 44px);
+                    letter-spacing: 1px;
+                }
+                ul {
+                    list-style: none;
+                    padding-left: 0;
+                    @include flex($direction: column, $align: center);
+                    gap: 10px 0;
+                    li {
+                        a {
+                            text-decoration: none;
+                            @include fonts(18px, 300, 24px);
+                            color: var(--txt-color);
+                            transition: 0.4s ease;
+                            @media (hover: hover) {
+                                &:hover {
+                                    color: var(--default-red);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        form {
+            @include flex($direction: column, $align: normal);
+            .form-floating > .form-control:focus ~ label::after,
+            .form-floating
+                > .form-control:not(:placeholder-shown)
+                ~ label::after,
+            .form-floating > .form-control-plaintext ~ label::after,
+            .form-floating > .form-select ~ label::after {
+                background-color: transparent;
+            }
+            .form-floating {
+                label {
+                    color: var(--default-red);
+                    @include fonts(19px, 400, 18px);
+                    padding-inline: 0;
+                    &::after {
+                        background-color: transparent;
+                    }
+                }
+                input.form-control {
+                    color: var(--txt-color);
+                    background-color: transparent;
+                    height: 65px;
+                    border-radius: 0;
+                    border: none;
+                    border-bottom: 1px solid #bfc3ca;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+                textarea.form-control {
+                    color: var(--txt-color);
+                    background-color: transparent;
+                    height: 115px;
+                    border-radius: 0;
+                    border: none;
+                    border-bottom: 1px solid #bfc3ca;
+                    &:focus {
+                        box-shadow: none;
+                    }
+                }
+            }
+            .form-check {
+                padding: 0;
+                margin-top: clamp(1.938rem, 1.146vw + 1.687rem, 3.063rem);
+                @include fonts(13px, 400, 13px);
+                color: var(--txt-color);
+                label {
+                    margin-left: 15px;
+                    margin-top: 3px;
+                    cursor: pointer;
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                        @include fonts(13px, 500, 13px);
+                        transition: 0.4s ease;
+                        color: var(--txt-color);
+                        @media (hover: hover) {
+                            &:hover {
+                                color: var(--txt-color);
+                            }
+                        }
+                    }
+                }
+            }
+            .submit-content {
+                @include flex($justify: center);
+            }
+        }
+    }
+    .map {
+        margin-bottom: var(--spacing);
+    }
+}

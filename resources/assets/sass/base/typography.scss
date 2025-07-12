@@ -1,0 +1,33 @@
+.font-heading1 {
+    color: var(--default-red);
+    @include fonts(
+        clamp(1.875rem, 1.529vw + 1.541rem, 3.375rem),
+        700,
+        clamp(2rem, 2.42vw + 1.471rem, 4.375rem)
+    );
+}
+.font-heading2 {
+    color: var(--default-red);
+    @include fonts(
+        clamp(1.25rem, 0.764vw + 1.083rem, 2rem),
+        500,
+        clamp(1.5rem, 0.828vw + 1.319rem, 2.313rem)
+    );
+    letter-spacing: 1px;
+}
+
+.font-heading4 {
+    color: var(--default-red);
+    @include fonts(clamp(1.125rem, 0.382vw + 1.041rem, 1.5rem),
+    400,
+    clamp(1.438rem, 0.318vw + 1.368rem, 1.75rem));
+}
+.content-defaults {
+    p {
+        @include fonts(18px, 400, 29px);
+        color: var(--txt-color);
+        @media (max-width: 992px) {
+            @include fonts(16px, 400, 26px);
+        }
+    }
+}

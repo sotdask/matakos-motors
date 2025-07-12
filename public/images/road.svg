@@ -1,0 +1,26 @@
+<svg width="992" height="496" viewBox="0 0 992 496" xmlns="http://www.w3.org/2000/svg">
+  <!-- Αριστερή άκρη δρόμου -->
+  <path d="M 0 220 
+           C 150 120, 450 380, 620 220 
+           S 850 120, 992 220"
+        stroke="#B30000"
+        stroke-width="10"
+        fill="none" />
+
+  <!-- Δεξιά άκρη δρόμου -->
+  <path d="M 0 300 
+           C 150 200, 450 460, 620 300 
+           S 850 200, 992 300"
+        stroke="#B30000"
+        stroke-width="10"
+        fill="none" />
+
+  <!-- Διακεκομμένη γραμμή στη μέση -->
+  <path d="M 0 260 
+           C 150 160, 450 420, 620 260 
+           S 850 160, 992 260"
+        stroke="#B30000"
+        stroke-width="5"
+        fill="none"
+        stroke-dasharray="30,20" />
+</svg>

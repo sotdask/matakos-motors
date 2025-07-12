@@ -1,0 +1,65 @@
+.accessories {
+    margin-block: var(--title-spacing) var(--spacing);
+    @include flex($direction: column, $align: center);
+    .intro-wrapper {
+        @include flex($direction: column, $align: center);
+        text-align: center;
+        p {
+            margin-block: 20px var(--spacing);
+            max-width: 400px;
+        }
+    }
+    .row {
+        .col-12:last-child {
+            @include flex($direction: column, $justify: center);
+            h3 {
+                max-width: 400px;
+                color: var(--default-red);
+                @include fonts(27px, 500, 37px);
+                @media (max-width: 992px) {
+                    display: none;
+                }
+            }
+            ul {
+                max-width: 436px;
+                list-style: none;
+                @media (max-width: 992px) {
+                    padding-left: 0;
+                    max-width: 100%;
+                }
+                li {
+                    @media (max-width: 992px) {
+                        text-align: center;
+                    }
+                    text-align: start;
+                    margin-top: 15px;
+                    @include fonts(17px, 300, 28px);
+                    color: var(--txt-color);
+                    strong {
+                        color: var(--default-red);
+                    }
+                    @media (max-width: 992px) {
+                        @include fonts(15px, 300, 18px);
+                    }
+                }
+            }
+            @media (max-width: 992px) {
+                order: 2;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        .col-12:first-child {
+            @include flex($align: center);
+            @media (max-width: 992px) {
+                order: 1;
+                @include flex($direction: column, $align: center);
+                text-align: center;
+            }
+            h3 {
+                color: var(--default-red);
+                @include fonts(22px, 400, 32px);
+            }
+        }
+    }
+}

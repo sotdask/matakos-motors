@@ -1,0 +1,80 @@
+footer {
+    border-top: 2px solid var(--default-red);
+    padding-block: 74px 25px;
+    .row {
+        gap: 25px;
+        margin-bottom: 74px;
+        .wrapper {
+            width: 245px;
+            @media (max-width: 992px) {
+                text-align: center;
+            }
+            h5 {
+                color: var(--default-red);
+                @include fonts(21px, 400, 44px);
+                letter-spacing: 1px;
+            }
+            ul {
+                list-style: none;
+                padding-left: 0;
+                @include flex($direction: column);
+                gap: 10px 0;
+                @media (max-width: 992px) {
+                    align-items: center;
+                }
+                li {
+                    a {
+                        text-decoration: none;
+                        @include fonts(18px, 300, 24px);
+                        color: var(--txt-color);
+                        transition: 0.4s ease;
+                        @media (hover: hover) {
+                            &:hover {
+                                color: var(--default-red);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .social-media {
+        width: 100%;
+        @include flex($justify: center);
+        gap: 0 33px;
+        margin-bottom: 25px;
+        img {
+            width: 50%;
+            transition: transform 0.4s ease;
+            @media (hover: hover) {
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+    .bottom-side {
+        @include flex($justify: space-between);
+        @include fonts(14px, 600, 18px);
+        color: var(--txt-color);
+        @media (max-width: 576px) {
+            flex-direction: column;
+            align-items: center;
+        }
+        a {
+            text-decoration: none;
+            @include fonts(14px, 600, 18px);
+            color: var(--txt-color);
+            .sparkle {
+                cursor: pointer;
+                display: inline-block;
+                animation: blink 1.5s infinite ease-in-out;
+                transition: transform 0.3s ease;
+                &:hover {
+                    animation: none;
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+}

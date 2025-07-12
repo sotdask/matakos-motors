@@ -1,0 +1,20 @@
+                    .main-btn {
+                        @include flex($align: center, $justify: center);
+                        @include sizing(129px, 40px);
+                        @include colors(var(--txt-color), var(--default-red));
+                        @include fonts(14px, 400, 20px);
+                        letter-spacing: 0.2px;
+                        text-decoration: none;
+                        border-radius: 25px;
+                        transition: 0.4s ease;
+                        border: none;
+                        @media (hover: hover) {
+                            &:hover {
+                                @include colors(
+                                    var(--default-red),
+                                    transparent
+                                );
+                                border: 1px solid var(--default-red);
+                            }
+                        }
+                    }

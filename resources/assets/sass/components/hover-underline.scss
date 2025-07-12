@@ -1,0 +1,8 @@
+.hover-underline {
+    background: linear-gradient(var(--default-red) 0 0) bottom / var(--d, 0) 1px
+        no-repeat;
+    transition: 0.5s;
+    &:hover {
+        --d: 100%;
+    }
+}
